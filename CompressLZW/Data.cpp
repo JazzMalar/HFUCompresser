@@ -30,3 +30,9 @@ ofstream& CData::OpenFileForWrite(string& path)
 	this->writeStream->open(path, ofstream::out);
 	return *(this->writeStream); 
 }
+
+int CData::Write()
+{
+	writeStream->flush(); 
+	return 0; 
+}

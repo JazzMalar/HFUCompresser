@@ -5,7 +5,7 @@
 using namespace std; 
 
 class CLZW :
-	protected CCompressor
+	public CCompressor
 {
 
 private:

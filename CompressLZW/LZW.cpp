@@ -13,11 +13,15 @@ CLZW::~CLZW()
 
 int CLZW::Compress(istream& input, ostream& output, string key)
 {
-	char c; 
-	while (input.get() >> c)
+	char c = 'a';
+	while (input.good())
 	{
-		cout << c << endl; 
+		c = input.get();
+		output << c; 
 	}
+
+	return 1; 
+
 }
 
 int CLZW::Decompress(istream& input, ostream& output, string key)
